@@ -1,0 +1,11 @@
+*.suo
+*.vshost.exe
+*~
+*.user
+obj
+*.swp
+bin
+_Resharper.*
+packages
+.fake
+build
