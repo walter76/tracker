@@ -51,7 +51,10 @@
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Margin="2"
-                Header="Today" />
+                Header="Today">
+
+                <ListView ItemsSource="{Binding Chores}" />
+            </GroupBox>
         </Grid>
 
     </DockPanel>

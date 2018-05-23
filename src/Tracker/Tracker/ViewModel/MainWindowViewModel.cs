@@ -1,14 +1,21 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using Tracker.WpfToolkit.Core;
 
 namespace Tracker.ViewModel
 {
     class MainWindowViewModel : ViewModelBase
     {
+        private string _newChoreText;
+
         public string NewChoreText
         {
-            get;
-            set;
+            get { return _newChoreText; }
+            set
+            {
+                _newChoreText = value;
+                InvokePropertyChanged();
+            }
         }
 
         public ICommand StartChoreCommand
@@ -17,14 +24,24 @@ namespace Tracker.ViewModel
             private set;
         }
 
+        public ObservableCollection<string> Chores
+        {
+            get;
+            private set;
+        }
+
         public MainWindowViewModel()
         {
             StartChoreCommand = new RelayCommand(StartChore);
+
+            Chores = new ObservableCollection<string>();
         }
 
         private void StartChore(object param)
         {
-            System.Console.WriteLine(NewChoreText);
+            Chores.Add(NewChoreText);
+
+            NewChoreText = "";
         }
     }
 }
