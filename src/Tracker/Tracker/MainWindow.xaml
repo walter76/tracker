@@ -13,5 +13,36 @@
                   IsExpanded="True">
             <view:SideBar />
         </Expander>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0"
+                     Grid.Column="0"
+                     Margin="2" />
+
+            <Button Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="2">
+                Start
+            </Button>
+
+            <GroupBox Grid.Row="1"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2"
+                      Margin="2"
+                      Header="Today">
+                
+            </GroupBox>
+        </Grid>
+        
     </DockPanel>
 </Window>
