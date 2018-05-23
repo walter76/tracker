@@ -1,3 +1,3 @@
 # tracker
 
-Windows application to track how much time you spent on which tasks.
+Windows desktop app to track how much time you spent on tasks.
