@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tracker"
+        xmlns:view="clr-namespace:Tracker.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Expander DockPanel.Dock="Left"
+                  ExpandDirection="Right"
+                  IsExpanded="True">
+            <view:SideBar />
+        </Expander>
+    </DockPanel>
 </Window>
