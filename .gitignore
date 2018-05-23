@@ -9,3 +9,4 @@ _Resharper.*
 packages
 .fake
 build
+dist
