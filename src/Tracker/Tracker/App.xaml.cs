@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Tracker.View;
 using Tracker.ViewModel;
 using Tracker.WpfToolkit.Core;
 
@@ -21,6 +16,7 @@ namespace Tracker
 
             ViewModelLocator.Instance.Registry = new ViewModelRegistry(new ViewModelFactory());
             ViewModelLocator.Instance.Registry.Register<MainWindow, MainWindowViewModel>();
+            ViewModelLocator.Instance.Registry.Register<ChoresView, ChoresViewModel>();
 
             var mainWindow = new MainWindow();
             mainWindow.Show();
