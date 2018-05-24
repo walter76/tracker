@@ -40,7 +40,10 @@ namespace Tracker.ViewModel
 
         private void StartChore(object param)
         {
-            Chores.Add(new Chore { Description = NewChoreText });
+            var chore = new Chore { Description = NewChoreText };
+            Chores.Add(chore);
+
+            chore.Start();
 
             NewChoreText = "";
         }
