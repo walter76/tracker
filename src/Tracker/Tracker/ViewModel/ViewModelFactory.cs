@@ -11,6 +11,10 @@ namespace Tracker.ViewModel
             {
                 return new MainWindowViewModel();
             }
+            if (viewModelType == typeof(ChoresViewModel))
+            {
+                return new ChoresViewModel();
+            }
 
             return null;
         }

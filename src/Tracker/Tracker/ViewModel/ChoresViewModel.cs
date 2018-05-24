@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Tracker.Model;
 using Tracker.WpfToolkit.Core;
 
 namespace Tracker.ViewModel
@@ -24,7 +25,7 @@ namespace Tracker.ViewModel
             private set;
         }
 
-        public ObservableCollection<string> Chores
+        public ObservableCollection<Chore> Chores
         {
             get;
             private set;
@@ -34,12 +35,12 @@ namespace Tracker.ViewModel
         {
             StartChoreCommand = new RelayCommand(StartChore);
 
-            Chores = new ObservableCollection<string>();
+            Chores = new ObservableCollection<Chore>();
         }
 
         private void StartChore(object param)
         {
-            Chores.Add(NewChoreText);
+            Chores.Add(new Chore { Description = NewChoreText });
 
             NewChoreText = "";
         }
