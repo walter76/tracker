@@ -7,16 +7,7 @@ namespace Tracker.ViewModel
     {
         public ViewModelBase Create(Type viewModelType)
         {
-            if (viewModelType == typeof(MainWindowViewModel))
-            {
-                return new MainWindowViewModel();
-            }
-            if (viewModelType == typeof(ChoresViewModel))
-            {
-                return new ChoresViewModel();
-            }
-
-            return null;
+            return Activator.CreateInstance(viewModelType) as ViewModelBase;
         }
     }
 }
