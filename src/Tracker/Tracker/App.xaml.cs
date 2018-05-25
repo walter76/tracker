@@ -16,7 +16,7 @@ namespace Tracker
 
             ViewModelLocator.Instance.Registry = new ViewModelRegistry(new ViewModelFactory());
             ViewModelLocator.Instance.Registry.Register<MainWindow, MainWindowViewModel>();
-            ViewModelLocator.Instance.Registry.Register<ChoresView, ChoresViewModel>();
+            ViewModelLocator.Instance.Registry.Register<ChoresView, ChoresViewViewModel>();
 
             var mainWindow = new MainWindow();
             mainWindow.Show();

@@ -46,7 +46,22 @@
             <ListView ItemsSource="{Binding Chores}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Description}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="{Binding Description}" />
+                            <TextBlock
+                                Grid.Column="1"
+                                Margin="2"
+                                FontWeight="Bold"
+                                Text="{Binding Elapsed}" />
+
+                            <Button Grid.Column="2" Command="{Binding StartStopCommand}">Stop</Button>
+                        </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

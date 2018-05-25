@@ -5,7 +5,7 @@ using Tracker.WpfToolkit.Core;
 
 namespace Tracker.ViewModel
 {
-    class ChoresViewModel : ViewModelBase
+    class ChoresViewViewModel : ViewModelBase
     {
         private string _newChoreText;
 
@@ -25,25 +25,25 @@ namespace Tracker.ViewModel
             private set;
         }
 
-        public ObservableCollection<Chore> Chores
+        public ObservableCollection<ChoreViewModel> Chores
         {
             get;
             private set;
         }
 
-        public ChoresViewModel()
+        public ChoresViewViewModel()
         {
             StartChoreCommand = new RelayCommand(StartChore);
 
-            Chores = new ObservableCollection<Chore>();
+            Chores = new ObservableCollection<ChoreViewModel>();
         }
 
         private void StartChore(object param)
         {
             var chore = new Chore { Description = NewChoreText };
-            Chores.Add(chore);
+            Chores.Add(new ChoreViewModel(chore));
 
-            chore.Start();
+            chore.StartStop();
 
             NewChoreText = "";
         }

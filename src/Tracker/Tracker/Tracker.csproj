@@ -55,7 +55,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Chore.cs" />
-    <Compile Include="ViewModel\ChoresViewModel.cs" />
+    <Compile Include="ViewModel\ChoresViewViewModel.cs" />
+    <Compile Include="ViewModel\ChoreViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelFactory.cs" />
     <Compile Include="View\ChoresView.xaml.cs">
